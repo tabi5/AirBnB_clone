@@ -53,3 +53,23 @@ class FileStorage:
                     self.new(eval(cls_name)(**o))
         except FileNotFoundError:
             return
+    
+    def reload(self):
+        try:
+            with open(FileStorage.__file_path) as f:
+                objdict = json.load(f)
+                for o in objdict.values():
+                    cls_name = o["__class__"]
+                    del o["__class__"]
+                    if cls_name == "Place":
+                        self.new(Place(**o))
+                    elif cls_name == "State":
+                        self.new(State(**o))
+                    elif cls_name == "City":
+                        self.new(City(**o))
+                    elif cls_name == "Amenity":
+                        self.new(Amenity(**o))
+                    elif cls_name == "Review":
+                        self.new(Review(**o))
+        except FileNotFoundError:
+            return
