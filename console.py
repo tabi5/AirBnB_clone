@@ -44,55 +44,77 @@ class HBNBCommand(cmd.Cmd):
             new_obj.save()
             print(new_obj.id)
 
-    def do_show(self, line):
-        """Show the string representation of an instance"""
-        args = line.split()
-        if not line:
+    def do_show(self, arg):
+        """Show an instance"""
+        if not arg:
             print("** class name missing **")
-        elif args[0] != "BaseModel" and args[0] != "User":
+            return
+        args = arg.split()
+        class_name = args[0]
+        if class_name not in ["BaseModel", "Place", "State", "City",
+                            "Amenity", "Review"]:
             print("** class doesn't exist **")
-        elif len(args) == 1:
+            return
+        if len(args) < 2:
             print("** instance id missing **")
-        else:
-            key = f"{args[0]}.{args[1]}"
-            objects = storage.all()
-            if key in objects:
-                print(objects[key])
-            else:
-                print("** no instance found **")
+            return
+        key = "{}.{}".format(class_name, args[1])
+        if key not in storage.all():
+            print("** no instance found **")
+            return
+        instance = storage.all()[key]
+        print(instance)
 
-    def do_destroy(self, line):
+    def do_destroy(self, arg):
         """Destroy an instance"""
-        args = line.split()
-        if not line:
+        if not arg:
             print("** class name missing **")
-        elif args[0] != "BaseModel" and args[0] != "User":
+            return
+        args = arg.split()
+        class_name = args[0]
+        if class_name not in ["BaseModel", "Place", "State",
+                              "City", "Amenity", "Review"]:
             print("** class doesn't exist **")
-        elif len(args) == 1:
+            return
+        if len(args) < 2:
             print("** instance id missing **")
-        else:
-            key = f"{args[0]}.{args[1]}"
-            objects = storage.all()
-            if key in objects:
-                objects.pop(key)
-                storage.save()
-            else:
-                print("** no instance found **")
+            return
+        key = "{}.{}".format(class_name, args[1])
+        if key not in storage.all():
+            print("** no instance found **")
+            return
+        del storage.all()[key]
+        storage.save()
 
-    def do_all(self, line):
-        """Print all string representation of all instances"""
-        args = line.split()
-        if not line:
-            objects = storage.all()
-            obj_list = [str(obj) for obj in objects.values()]
-            print(obj_list)
-        elif args[0] != "BaseModel" and args[0] != "User":
+    def do_all(self, arg):
+        """Retrieve all instances of a class"""
+        if not arg:
+            print("** class name missing **")
+            return
+        if arg not in ["BaseModel", "Place", "State", "City",
+                       "Amenity", "Review"]:
             print("** class doesn't exist **")
-        else:
-            objects = storage.all()
-            obj_list = [str(obj) for obj in objects.values()
-                        if type(obj).__name__ == args[0]]
-            print(obj_list)
+            return
+        instances = []
+        for instance in storage.all().values():
+            if instance.__class__.__name__ == arg:
+                instances.append(instance.__str__())
+        print(instances)
+
+    def do_count(self, arg):
+        """IT Retrieve the number of instances of a class"""
+        if not arg:
+            print("** class name missing **")
+            return
+        if arg not in ["BaseModel", "Place", "State", "City",
+                       "Amenity", "Review"]:
+            print("** class doesn't exist **")
+            return
+        count = 0
+        for instance in storage.all().values():
+            if instance.__class__.__name__ == arg:
+                count += 1
+        print(count)
 
     def do_update(self, line):
         """Update an instance"""
