@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """it Defines the BaseModel class."""
-from models import storage
 import uuid
 from uuid import uuid4
 from datetime import datetime
 import models
-from models.storage import save
 
 
 class BaseModel:
@@ -28,6 +26,8 @@ class BaseModel:
                     setattr(self, k, datetime.strptime(v, tform))
                 else:
                     setattr(self, k, v)
+        else:
+            models.storage.new(self)
 
     def save(self):
         """it Update updated_at with the current datetime."""
