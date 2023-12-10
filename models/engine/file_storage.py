@@ -53,7 +53,7 @@ class FileStorage:
                     self.new(eval(cls_name)(**o))
         except FileNotFoundError:
             return
-    
+
     def reload(self):
         try:
             with open(FileStorage.__file_path) as f:
