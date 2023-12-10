@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """it Defines the BaseModel class."""
-from models import storage
 import uuid
 from uuid import uuid4
 from datetime import datetime
 import models
-from models.storage import save
 
 class BaseModel:
     """Represents a BaseModel of the HBnB project."""
