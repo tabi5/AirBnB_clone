@@ -11,8 +11,9 @@ from models.base_model import BaseModel
 from models.user import User
 from models import storage
 
+
 class HBNBCommand(cmd.Cmd):
-    """Command interpreter class"""
+    """The Command interpreter class"""
 
     prompt = "(hbnb) "
 
@@ -89,7 +90,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             objects = storage.all()
-            obj_list = [str(obj) for obj in objects.values() if type(obj).__name__ == args[0]]
+            obj_list = [str(obj) for obj in objects.values()
+                        if type(obj).__name__ == args[0]]
             print(obj_list)
 
     def do_update(self, line):
