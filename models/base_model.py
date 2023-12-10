@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """it Defines the BaseModel class."""
+from models import storage
 import uuid
 from uuid import uuid4
 from datetime import datetime
 import models
-
+from models.storage import save
 
 class BaseModel:
     """Represents a BaseModel of the HBnB project."""
+    
     def __init__(self, *args, **kwargs):
         """Initialize a new BaseModel.
 
@@ -17,15 +19,14 @@ class BaseModel:
         """
         tform = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
-        current_time = datetime.today()
-        self.created_at = current_time
-        self.updated_at = current_time
-        if kwargs:
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
+        if len(kwargs) != 0:
             for k, v in kwargs.items():
-                if k in ["created_at", "updated_at"]:
-                    setattr(self, k, datetime.strptime(v, tform))
+                if k == "created_at" or k == "updated_at":
+                    self.__dict__[k] = datetime.strptime(v, tform)
                 else:
-                    setattr(self, k, v)
+                    self.__dict__[k] = v
         else:
             models.storage.new(self)
 
