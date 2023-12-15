@@ -1,0 +1,287 @@
+/* Styling for the places container */
+.places {
+    display: flex; /* Display set to flex */
+    flex-direction: column; /* Flex direction set to column */
+    padding-left: 30px; /* Left padding set to 30 pixels */
+}
+
+/* Styling for the places heading */
+.places h1 {
+    font-size: 30px; /* Font size set to 30 pixels */
+}
+
+/* Styling for the places title section */
+.places_title {
+    padding-top: 30px; /* Top padding set to 30 pixels */
+    margin-bottom: -25px; /* Bottom margin set to -25 pixels */
+}
+
+/* Styling for the articles container */
+.articles {
+    display: flex; /* Display set to flex */
+    flex-wrap: wrap; /* Flex wrap set to wrap */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for each article */
+article {
+    width: 390px; /* Width set to 390 pixels */
+    margin: 20px; /* Margin set to 20 pixels */
+    padding: 20px; /* Padding set to 20 pixels */
+    border: solid #FF5A5F 1px; /* Border set to solid with color #FF5A5F and width 1 pixel */
+    border-radius: 4px; /* Border radius set to 4 pixels */
+    text-align: center; /* Text aligned to center */
+    font-size: 30px; /* Font size set to 30 pixels */
+    display: flex; /* Display set to flex */
+    flex-direction: column; /* Flex direction set to column */
+    justify-content: flex-start; /* Content justified to flex-start */
+    padding-bottom: 30px; /* Bottom padding set to 30 pixels */
+    position: relative; /* Position set to relative */
+}
+
+/* Styling for the article heading */
+article h2 {
+    font-size: 30px; /* Font size set to 30 pixels */
+    margin-top: -1px; /* Top margin set to -1 pixel */
+    padding-left: 0%; /* Left padding set to 0% */
+}
+
+/* Styling for the article title */
+.article_title {
+    width: 100%; /* Width set to 100% */
+}
+
+/* Styling for the price by night section */
+.price_by_night {
+    color: #FF5A5F; /* Text color set to #FF5A5F */
+    border: 4px solid #FF5A5F; /* Border set to solid with color #FF5A5F and width 4 pixels */
+    min-width: 60px; /* Minimum width set to 60 pixels */
+    height: 60px; /* Height set to 60 pixels */
+    font-size: 30px; /* Font size set to 30 pixels */
+    border-radius: 50%; /* Border radius set to 50% */
+    display: flex; /* Display set to flex */
+    justify-content: center; /* Content justified to center */
+    align-items: center; /* Items aligned to center */
+    margin-left: auto; /* Left margin set to auto */
+    position: absolute; /* Position set to absolute */
+    top: 10px; /* Top position set to 10 pixels */
+    right: 20px; /* Right position set to 20 pixels */
+    margin-top: -5px; /* Top margin set to -5 pixels */
+}
+
+/* Styling for the price */
+.price {
+    margin-top: -1px; /* Top margin set to -1 pixel */
+}
+
+/* Styling for the price title section */
+.price_title {
+    display: flex; /* Display set to flex */
+}
+
+/* Styling for the information section */
+.information {
+    height: 80px; /* Height set to 80 pixels */
+    border-top: solid #DDDDDD 1px; /* Top border set to solid with color #DDDDDD and width 1 pixel */
+    border-bottom: solid #DDDDDD 1px; /* Bottom border set to solid with color #DDDDDD and width 1 pixel */
+    display: flex; /* Display set to flex */
+    flex-direction: row; /* Flex direction set to row */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for the max guest section */
+.max_guest {
+    width: 100px; /* Width set to 100 pixels */
+    display: flex; /* Display set to flex */
+    height: inherit; /* Height set to inherit */
+    flex-direction: column; /* Flex direction set to column */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for the guest icon */
+.guest_icon {
+    height: inherit; /* Height set to inherit */
+    width: inherit; /* Width set to inherit */
+    background: url("../images/icon_group.png"); /* BackgroundCertainly! Here's the updated CSS code with descriptions for the new rules you provided:
+
+```css
+/* Styling for the places container */
+.places {
+    display: flex; /* Display set to flex */
+    flex-direction: column; /* Flex direction set to column */
+    padding-left: 30px; /* Left padding set to 30 pixels */
+}
+
+/* Styling for the places heading */
+.places h1 {
+    font-size: 30px; /* Font size set to 30 pixels */
+}
+
+/* Styling for the places title section */
+.places_title {
+    padding-top: 30px; /* Top padding set to 30 pixels */
+    margin-bottom: -25px; /* Bottom margin set to -25 pixels */
+}
+
+/* Styling for the articles container */
+.articles {
+    display: flex; /* Display set to flex */
+    flex-wrap: wrap; /* Flex wrap set to wrap */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for each article */
+article {
+    width: 390px; /* Width set to 390 pixels */
+    margin: 20px; /* Margin set to 20 pixels */
+    padding: 20px; /* Padding set to 20 pixels */
+    border: solid #FF5A5F 1px; /* Border set to solid with color #FF5A5F and width 1 pixel */
+    border-radius: 4px; /* Border radius set to 4 pixels */
+    text-align: center; /* Text aligned to center */
+    font-size: 30px; /* Font size set to 30 pixels */
+    display: flex; /* Display set to flex */
+    flex-direction: column; /* Flex direction set to column */
+    justify-content: flex-start; /* Content justified to flex-start */
+    padding-bottom: 30px; /* Bottom padding set to 30 pixels */
+    position: relative; /* Position set to relative */
+}
+
+/* Styling for the article heading */
+article h2 {
+    font-size: 30px; /* Font size set to 30 pixels */
+    margin-top: -1px; /* Top margin set to -1 pixel */
+    padding-left: 0%; /* Left padding set to 0% */
+}
+
+/* Styling for the article title */
+.article_title {
+    width: 100%; /* Width set to 100% */
+}
+
+/* Styling for the price by night section */
+.price_by_night {
+    color: #FF5A5F; /* Text color set to #FF5A5F */
+    border: 4px solid #FF5A5F; /* Border set to solid with color #FF5A5F and width 4 pixels */
+    min-width: 60px; /* Minimum width set to 60 pixels */
+    height: 60px; /* Height set to 60 pixels */
+    font-size: 30px; /* Font size set to 30 pixels */
+    border-radius: 50%; /* Border radius set to 50% */
+    display: flex; /* Display set to flex */
+    justify-content: center; /* Content justified to center */
+    align-items: center; /* Items aligned to center */
+    margin-left: auto; /* Left margin set to auto */
+    position: absolute; /* Position set to absolute */
+    top: 10px; /* Top position set to 10 pixels */
+    right: 20px; /* Right position set to 20 pixels */
+    margin-top: -5px; /* Top margin set to -5 pixels */
+}
+
+/* Styling for the price */
+.price {
+    margin-top: -1px; /* Top margin set to -1 pixel */
+}
+
+/* Styling for the price title section */
+.price_title {
+    display: flex; /* Display set to flex */
+}
+
+/* Styling for the information section */
+.information {
+    height: 80px; /* Height set to 80 pixels */
+    border-top: solid #DDDDDD 1px; /* Top border set to solid with color #DDDDDD and width 1 pixel */
+    border-bottom: solid #DDDDDD 1px; /* Bottom border set to solid with color #DDDDDD and width 1 pixel */
+    display: flex; /* Display set to flex */
+    flex-direction: row; /* Flex direction set to row */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for the max guest section */
+.max_guest {
+    width: 100px; /* Width set to 100 pixels */
+    display: flex; /* Display set to flex */
+    height: inherit; /* Height set to inherit */
+    flex-direction: column; /* Flex direction set to column */
+    justify-content: center; /* Content justified to center */
+}
+/* Styling for the guest icon */
+.guest_icon {
+    height: inherit; /* Height set to inherit */
+    width: inherit; /* Width set to inherit */
+    background: url("../images/icon_group.png"); /* Background image set to "../images/icon_group.png" */
+    background-repeat: no-repeat; /* Background image not repeated */
+    margin-left: 35px; /* Left margin set to 35 pixels */
+}
+
+/* Styling for the guest number */
+.guest_number h2 {
+    font-size: 14px; /* Font size set to 14 pixels */
+    color:  #484848; /* Text color set to #484848 */
+    font-weight: normal; /* Font weight set to normal */
+}
+
+/* Styling for the number of rooms section */
+.number_rooms {
+    width: 100px; /* Width set to 100 pixels */
+    display: flex; /* Display set to flex */
+    height: inherit; /* Height set to inherit */
+    flex-direction: column; /* Flex direction set to column */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for the rooms icon */
+.rooms_icon {
+    height: inherit; /* Height set to inherit */
+    width: inherit; /* Width set to inherit */
+    background: url("../images/icon_bed.png"); /* Background image set to "../images/icon_bed.png" */
+    background-repeat: no-repeat; /* Background image not repeated */
+    margin-left: 35px; /* Left margin set to 35 pixels */
+}
+
+/* Styling for the rooms number */
+.rooms_number h2 {
+    font-size: 14px; /* Font size set to 14 pixels */
+    color:  #484848; /* Text color set to #484848 */
+    font-weight: normal; /* Font weight set to normal */
+}
+
+/* Styling for the number of bathrooms section */
+.number_bathrooms {
+    width: 100px; /* Width set to 100 pixels */
+    display: flex; /* Display set to flex */
+    height: inherit; /* Height set to inherit */
+    flex-direction: column; /* Flex direction set to column */
+    justify-content: center; /* Content justified to center */
+}
+
+/* Styling for the bathrooms icon */
+.bathrooms_icon {
+    height: inherit; /* Height set to inherit */
+    width: inherit; /* Width set to inherit */
+    background: url("../images/icon_bath.png"); /* Background image set to "../images/icon_bath.png" */
+    background-repeat: no-repeat; /* Background image not repeated */
+    margin-left: 35px; /* Left margin set to 35 pixels */
+}
+
+/* Styling for the bathrooms number */
+.bathrooms_number h2 {
+    font-size: 14px; /* Font size set to 14 pixels */
+    color:  #484848; /* Text color set to #484848 */
+    font-weight: normal; /* Font weight set to normal */
+}
+
+/* Styling for the user section */
+.user {
+    font-size: 14px; /* Font size set to 14 pixels */
+    color: #484848; /* Text color set to #484848 */
+    text-align: left; /* Text aligned to left */
+    margin-top: 15px; /* Top margin set to 15 pixels */
+}
+
+/* Styling for the description section */
+.description {
+    font-size: 14px; /* Font size set to 14 pixels */
+    text-align: left; /* Text aligned to left */
+    margin-top: 7px; /* Top margin set to 7 pixels */
+    margin-bottom: 0px; /* Bottom margin set to 0 pixels */
+}

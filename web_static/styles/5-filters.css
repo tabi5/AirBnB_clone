@@ -1,0 +1,63 @@
+/* Styling for the filters container */
+.filters {
+    background-color: white; /* Background color set to white */
+    height: 70px; /* Height set to 70 pixels */
+    width: 100%; /* Width set to 100% of the parent container */
+    border: solid 1px #DDDDDD; /* Border style set to solid with 1 pixel width and color #DDDDDD */
+    border-radius: 4px; /* Border radius set to 4 pixels */
+    text-align: right; /* Text aligned to the right */
+}
+
+/* Styling for the buttons within the filters section */
+section.filters button {
+    margin-top: 11px; /* Top margin set to 11 pixels */
+    margin-bottom: 11px; /* Bottom margin set to 11 pixels */
+    margin-right: 30px; /* Right margin set to 30 pixels */
+    font-size: 18px; /* Font size set to 18 pixels */
+    background-color: #FF5A5F; /* Background color set to #FF5A5F */
+    color: white; /* Text color set to white */
+    height: 48px; /* Height set to 48 pixels */
+    width: 20%; /* Width set to 20% of the parent container */
+    border: none; /* No border */
+    border-radius: 4px; /* Border radius set to 4 pixels */
+}
+
+/* Hover effect for the buttons within the filters section */
+section.filters button:hover {
+    opacity: 0.9; /* Opacity reduced to 90% on hover */
+}
+
+/* Styling for the locations section */
+.locations {
+    text-align: left; /* Text aligned to the left */
+    height: 100%; /* Height set to 100% of the parent container */
+    width: 25%; /* Width set to 25% of the parent container */
+    border-right: solid 1px #DDDDDD; /* Right border style set to solid with 1 pixel width and color #DDDDDD */
+    margin-left: 30px; /* Left margin set to 30 pixels */
+    float: left; /* Element floated to the left */
+}
+
+/* Styling for the amenities section */
+.amenities {
+    text-align: left; /* Text aligned to the left */
+    height: 100%; /* Height set to 100% of the parent container */
+    width: 25%; /* Width set to 25% of the parent container */
+    margin-left: 30px; /* Left margin set to 30 pixels */
+    float: left; /* Element floated to the left */
+}
+
+/* Styling for heading level 3 */
+h3 {
+    font-weight: 600; /* Font weight set to 600 */
+    margin: 0; /* Margin reset to 0 */
+    margin-top: 17px; /* Top margin set to 17 pixels */
+    padding: 0; /* Padding reset to 0 */
+}
+
+/* Styling for heading level 4 */
+h4 {
+    margin: 0; /* Margin reset to 0 */
+    padding: 0; /* Padding reset to 0 */
+    font-weight: 400; /* Font weight set to 400 */
+    font-size: 14px; /* Font size set to 14 pixels */
+}

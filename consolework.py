@@ -119,67 +119,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
-    def do_user(self, line):
-        """Handle user-related commands"""
-        self.do_class_commands(line, User)
-
-    def do_state(self, line):
-        """Handle state-related commands"""
-        self.do_class_commands(line, State)
-
-    def do_city(self, line):
-        """Handle city-related commands"""
-        self.do_class_commands(line, City)
-
-    def do_place(self, line):
-        """Handle place-related commands"""
-        self.do_class_commands(line, Place)
-
-    def do_amenity(self, line):
-        """Handle amenity-related commands"""
-        self.do_class_commands(line, Amenity)
-
-    def do_review(self, line):
-        """Handle review-related commands"""
-        self.do_class_commands(line, Review)
-
-    def do_count(self, line):
-        """Count the number of instances of a class"""
-        args = line.split()
-        if not line:
-            print("** class name missing **")
-        elif args[0] != "BaseModel" and args[0] != "User":
-            print("** class doesn't exist **")
-        else:
-            objects = storage.all()
-            count = sum(1 for obj in objects.values()
-                        if type(obj).__name__ == args[0])
-            print(count)
-
-    def do_search(self, line):
-        """Search for instances based on attribute values"""
-        args = line.split()
-        if not line:
-            print("** class name missing **")
-        elif args[0] != "BaseModel" and args[0] != "User":
-            print("** class doesn't exist **")
-        elif len(args) < 3:
-            print("** attribute name and value missing **")
-        else:
-            objects = storage.all()
-            obj_list = [str(obj) for obj in objects.values()
-                        if type(obj).__name__ == args[0]
-                        and getattr(obj, args[1], None) == args[2]]
-            print(obj_list)
-
-    def do_exit(self, line):
-        """Exit the program"""
-        return True
-
-    def do_help(self, line):
-        """Display help information for commands"""
-        cmd.Cmd.do_help(self, line)
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
